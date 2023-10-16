@@ -1,6 +1,7 @@
 # RollaBall
 
 ## Aim:
+To Roll a Ball using C# program in unity .
 
 ## Algorithm:
 
@@ -43,8 +44,68 @@ Copy the PlayerController and drag to Script folder
 Double click the PlayerController file and type the coding
 
 ## Program:
-To Roll a Ball using C# program in unity .
+```
+Developed by :DHARSHAN V
+Register No: 212222230031
+```
+```
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
+public class Program : MonoBehaviour
+{
+    public float Xforce = 5.0f;
+    public float Zforce = 5.0f;
+    public float Yforce = 300f;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+
+    }
+    // Update is called once per frame
+    void Update()
+    {
+        float x = 0.0f;
+        float y = 0.0f;
+        float z = 0.0f;
+        if (Input.GetKey(KeyCode.A))
+        {
+            x = x - Xforce;
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            x = x + Xforce;
+        }
+        if (Input.GetKey(KeyCode.W))
+        {
+            z = z + Zforce;
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            z = z - Zforce;
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            y = Yforce;
+        }
+        GetComponent<Rigidbody>().AddForce(x, y, z);
+
+    }
+}
+```
 ## Output:
+
+![Screenshot 2023-10-16 205346](https://github.com/Dharshan011/RollaBall/assets/113497491/12e89daf-0cbf-40ba-ab0c-d2f74d52458a)
+
+
+![Screenshot 2023-10-16 205400](https://github.com/Dharshan011/RollaBall/assets/113497491/12999f7e-145a-4021-9947-0116320baa0b)
+
+
+
+
+
+
 
 ## Result:
